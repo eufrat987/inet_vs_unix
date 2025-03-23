@@ -9,6 +9,7 @@
 #define SOCKET_PATH "./unix_socket"
 #define LISTEN_BACKLOG 1
 #define BUFFER_SIZE 20
+#define TO_RECEIVE 1000000
 
 int connection_socket = -1;
 
@@ -67,7 +68,7 @@ int main(int argc, char **argv) {
 	exit(EXIT_FAILURE);
     }
    
-    int to_receive = 5;
+    int to_receive = TO_RECEIVE;
     char buffer[BUFFER_SIZE];
 
     while (to_receive > 0) {
