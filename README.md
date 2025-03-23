@@ -6,18 +6,25 @@ Test performance between inet socket and unix (local) socket.
 ## Test architecture
 
 ### Unix socket
-Server <-- unix_socket (file) <-- data (size 1GB) -- Client
+Server <-- unix_socket (file) <-- data (size 1GB/100GB) -- Client
 
 ### Inet socket
-Server <-- port 8080 <-- data (size 1GB) -- Client
+Server <-- port 8080 <-- data (size 1GB/100GB) -- Client
 
 
 ## Test result (?)
+### 1GB
 
 Buffer size | 20 | 1024 | 10240 | 102400 
 --- | --- | --- | --- | ---  
 Unix socket | 1m2.384s | 0m1.336s | 0m0.266s | 0m0.200s
 Inet socket | 0m33.589s | 0m1.076s | 0m0.445s | 0m0.322s
+
+### 100GB
+Buffer size  | 10240 | 102400 
+--- | --- | ---  
+Unix socket | 0m27.426s | 0m19.908s
+Inet socket | 0m37.817s | 0m31.756s
 
 ## Questions 
 ` man 7 unix `
