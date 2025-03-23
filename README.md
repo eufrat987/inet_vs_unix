@@ -38,3 +38,25 @@ I expect that unix type server will receive data in less time than inet type ser
 
 ## Other repo that tests this topic
 [IPC Bench](https://github.com/rigtorp/ipc-bench.git)
+
+Results from this repo: unix is ~7 times faster in throughput than inet.
+
+> time ./unix_thr 100 1000000
+message size: 100 octets
+message count: 1000000
+average throughput: 792317 msg/s
+average throughput: 633 Mb/s
+
+real	0m1.269s
+user	0m0.093s
+sys	0m1.140s
+
+> time ./tcp_thr 100 1000000
+message size: 100 octets
+message count: 1000000
+average throughput: 146742 msg/s
+average throughput: 117 Mb/s
+
+real	0m7.822s
+user	0m0.233s
+sys	0m6.583s
