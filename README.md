@@ -37,4 +37,4 @@ I expect that unix type server will receive data in less time than inet type ser
 
 
 ## Other repo that tests this topic
-[IPC Bench]([https://github.com/vuejs/vue](https://github.com/rigtorp/ipc-bench.git))
+[IPC Bench](https://github.com/rigtorp/ipc-bench.git)
