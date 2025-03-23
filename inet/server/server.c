@@ -9,7 +9,7 @@
 #define LISTEN_PORT 8080
 #define LISTEN_BACKLOG 1
 #define BUFFER_SIZE 1024
-#define TO_RECEIVE 1024LL * 1024 * 1024 // 1GB
+#define TO_RECEIVE 1024LL * 1024 * 1024 * 100 // 100GB
 
 int main(int argc, char **argv) {
     printf("This is project %s.\n", PROJECT_NAME);
