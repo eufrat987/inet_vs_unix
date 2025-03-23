@@ -14,12 +14,10 @@ Server <-- port 8080 <-- data (size 1GB) -- Client
 
 ## Test result (?)
 
-### Unix socket
-1m2.384s
-
-### Inet socket
-0m33.589s
-
+Buffer size | 20 | 1024 | 10240 | 102400 
+--- | --- | --- | --- | ---  
+Unix socket | 1m2.384s | 0m1.336s | 0m0.266s | 0m0.200s
+Inet socket | 0m33.589s | 0m1.076s | 0m0.445s | 0m0.322s
 
 ## Questions 
 ` man 7 unix `
@@ -29,4 +27,4 @@ same machine efficiently.  Traditionally, UNIX domain sockets can be either unna
 filesystem  pathname  (marked as being of type socket).  Linux also supports an abstract namespace
 which is independent of the filesystem.
 
-I expected that unix type server will receive data in less time than inet type server. 
+I expect that unix type server will receive data in less time than inet type server. 
