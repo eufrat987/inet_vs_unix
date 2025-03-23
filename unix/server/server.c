@@ -9,7 +9,7 @@
 #define SOCKET_PATH "./unix_socket"
 #define LISTEN_BACKLOG 1
 #define BUFFER_SIZE 20
-#define TO_RECEIVE 1000000
+#define TO_RECEIVE 1024LL * 1024 * 1024 // 1GB
 
 int connection_socket = -1;
 
@@ -69,13 +69,15 @@ int main(int argc, char **argv) {
 	exit(EXIT_FAILURE);
     }
    
-    int to_receive = TO_RECEIVE;
+    long long int to_receive = TO_RECEIVE;
     char buffer[BUFFER_SIZE];
 
     while (to_receive > 0) {
 	ssize_t r = read(client_fd, buffer, sizeof(buffer)); 
 	to_receive -= r;
     }
+
+    printf("Received %lld bytes\n", TO_RECEIVE - to_receive);
 
 
     cleanup();
