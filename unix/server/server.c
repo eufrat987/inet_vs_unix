@@ -17,6 +17,7 @@ void cleanup() {
     printf("Clean up\n");
     close(connection_socket);
     unlink(SOCKET_PATH);
+    exit(EXIT_SUCCESS);
 }
 
 void add_signals_handler() {
