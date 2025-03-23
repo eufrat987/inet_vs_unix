@@ -21,10 +21,10 @@ Unix socket | 1m2.384s | 0m1.336s | 0m0.266s | 0m0.200s
 Inet socket | 0m33.589s | 0m1.076s | 0m0.445s | 0m0.322s
 
 ### 100GB
-Buffer size  | 10240 | 102400 
---- | --- | ---  
-Unix socket | 0m27.426s | 0m19.908s
-Inet socket | 0m37.817s | 0m31.756s
+Buffer size  | 10240 | 102400 | 1024000 
+--- | --- | --- | --- 
+Unix socket | 0m27.426s | 0m19.908s | 0m16.029s
+Inet socket | 0m37.817s | 0m31.756s | 0m25.813s
 
 ## Questions 
 ` man 7 unix `
