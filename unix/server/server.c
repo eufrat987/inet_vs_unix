@@ -8,7 +8,7 @@
 #define PROJECT_NAME "server"
 #define SOCKET_PATH "./unix_socket"
 #define LISTEN_BACKLOG 1
-#define BUFFER_SIZE 20
+#define BUFFER_SIZE 1024
 #define TO_RECEIVE 1024LL * 1024 * 1024 // 1GB
 
 int connection_socket = -1;

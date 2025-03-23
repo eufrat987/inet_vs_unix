@@ -7,7 +7,7 @@
 
 #define PROJECT_NAME "client"
 #define TO_SEND 1024LL * 1024 * 1024 // 1GB
-#define BUFFER_SIZE 20
+#define BUFFER_SIZE 1024
 #define LISTEN_PORT 8080
 
 int main(int argc, char **argv) {

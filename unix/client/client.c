@@ -7,7 +7,7 @@
 #define PROJECT_NAME "client"
 #define SOCKET_PATH "../../server/build/unix_socket"
 #define TO_SEND 1024LL * 1024 * 1024 // 1GB
-#define BUFFER_SIZE 20
+#define BUFFER_SIZE 1024
 
 int main(int argc, char **argv) {
     printf("This is project %s.\n", PROJECT_NAME);

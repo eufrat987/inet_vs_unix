@@ -8,7 +8,7 @@
 #define PROJECT_NAME "server"
 #define LISTEN_PORT 8080
 #define LISTEN_BACKLOG 1
-#define BUFFER_SIZE 20
+#define BUFFER_SIZE 1024
 #define TO_RECEIVE 1024LL * 1024 * 1024 // 1GB
 
 int main(int argc, char **argv) {
