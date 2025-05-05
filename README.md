@@ -60,3 +60,12 @@ average throughput: 117 Mb/s \
 real	0m7.822s \
 user	0m0.233s \
 sys	0m6.583s \
+
+---
+Observation from ipc-bench repo:
+
+It is possible within scope of the same proceess create special unix socket.
+
+       The socketpair() call creates an unnamed pair of connected sockets in the specified domain, of the
+       specified  type,  and using the optionally specified protocol.  For further details of these argu‐
+       ments, see socket(2).
